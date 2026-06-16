@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRD Template Generator</title>
+    <meta name="description" content="Generate professional Product Requirements Documents with guided templates">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 PRD Template Generator</h1>
+            <p class="subtitle">Create professional Product Requirements Documents with ease</p>
+        </header>
+
+        <main>
+            <form id="prdForm">
+                <!-- Project Overview Section -->
+                <section class="form-section">
+                    <h2>1. Project Overview</h2>
+                    <div class="form-group">
+                        <label for="projectName">Project Name *</label>
+                        <input type="text" id="projectName" required placeholder="e.g., Mobile App Redesign">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectOwner">Product Owner</label>
+                        <input type="text" id="projectOwner" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="createdDate">Date</label>
+                        <input type="date" id="createdDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="version">Version</label>
+                        <input type="text" id="version" placeholder="e.g., 1.0">
+                    </div>
+                </section>
+
+                <!-- Executive Summary Section -->
+                <section class="form-section">
+                    <h2>2. Executive Summary</h2>
+                    <div class="form-group">
+                        <label for="executiveSummary">Brief Overview *</label>
+                        <textarea id="executiveSummary" rows="4" required 
+                            placeholder="Provide a high-level summary of what this product/feature is and why it matters"></textarea>
+                        <small>Tip: Keep it concise - 2-3 sentences that capture the essence</small>
+                    </div>
+                </section>
+
+                <!-- Problem Statement Section -->
+                <section class="form-section">
+                    <h2>3. Problem Statement</h2>
+                    <div class="form-group">
+                        <label for="problemStatement">What problem are we solving? *</label>
+                        <textarea id="problemStatement" rows="4" required 
+                            placeholder="Describe the user pain point or business problem"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="targetUsers">Target Users</label>
+                        <textarea id="targetUsers" rows="3" 
+                            placeholder="Who experiences this problem? Define your user personas"></textarea>
+                    </div>
+                </section>
+
+                <!-- Goals and Objectives Section -->
+                <section class="form-section">
+                    <h2>4. Goals & Objectives</h2>
+                    <div class="form-group">
+                        <label for="businessGoals">Business Goals</label>
+                        <textarea id="businessGoals" rows="3" 
+                            placeholder="What business outcomes do we expect? (e.g., increase revenue, reduce churn)"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="userGoals">User Goals</label>
+                        <textarea id="userGoals" rows="3" 
+                            placeholder="What will users be able to accomplish?"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="successMetrics">Success Metrics (KPIs)</label>
+                        <textarea id="successMetrics" rows="3" 
+                            placeholder="How will we measure success? (e.g., 20% increase in user engagement)"></textarea>
+                    </div>
+                </section>
+
+                <!-- User Stories Section -->
+                <section class="form-section">
+                    <h2>5. User Stories</h2>
+                    <div class="form-group">
+                        <label for="userStories">Key User Stories</label>
+                        <textarea id="userStories" rows="5" 
+                            placeholder="As a [user type], I want [goal], so that [benefit]&#10;&#10;Example:&#10;As a mobile user, I want to save items to my cart, so that I can purchase them later"></textarea>
+                        <small>Tip: Write one user story per line</small>
+                    </div>
+                </section>
+
+                <!-- Features and Requirements Section -->
+                <section class="form-section">
+                    <h2>6. Features & Requirements</h2>
+                    <div class="form-group">
+                        <label for="mustHaveFeatures">Must-Have Features (P0)</label>
+                        <textarea id="mustHaveFeatures" rows="4" 
+                            placeholder="Critical features required for launch&#10;- Feature 1&#10;- Feature 2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="shouldHaveFeatures">Should-Have Features (P1)</label>
+                        <textarea id="shouldHaveFeatures" rows="4" 
+                            placeholder="Important but not critical for initial launch"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="niceToHaveFeatures">Nice-to-Have Features (P2)</label>
+                        <textarea id="niceToHaveFeatures" rows="4" 
+                            placeholder="Features for future consideration"></textarea>
+                    </div>
+                </section>
+
+                <!-- Technical Considerations Section -->
+                <section class="form-section">
+                    <h2>7. Technical Considerations</h2>
+                    <div class="form-group">
+                        <label for="technicalRequirements">Technical Requirements</label>
+                        <textarea id="technicalRequirements" rows="4" 
+                            placeholder="Platform requirements, integrations, APIs, performance needs, etc."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="dependencies">Dependencies</label>
+                        <textarea id="dependencies" rows="3" 
+                            placeholder="What other systems, teams, or projects does this depend on?"></textarea>
+                    </div>
+                </section>
+
+                <!-- Timeline Section -->
+                <section class="form-section">
+                    <h2>8. Timeline & Milestones</h2>
+                    <div class="form-group">
+                        <label for="timeline">Key Milestones</label>
+                        <textarea id="timeline" rows="4" 
+                            placeholder="Phase 1: Discovery - [Date]&#10;Phase 2: Design - [Date]&#10;Phase 3: Development - [Date]&#10;Phase 4: Launch - [Date]"></textarea>
+                    </div>
+                </section>
+
+                <!-- Risks and Assumptions Section -->
+                <section class="form-section">
+                    <h2>9. Risks & Assumptions</h2>
+                    <div class="form-group">
+                        <label for="risks">Potential Risks</label>
+                        <textarea id="risks" rows="3" 
+                            placeholder="What could go wrong? Technical risks, resource constraints, market risks"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="assumptions">Assumptions</label>
+                        <textarea id="assumptions" rows="3" 
+                            placeholder="What are we assuming to be true?"></textarea>
+                    </div>
+                </section>
+
+                <!-- Out of Scope Section -->
+                <section class="form-section">
+                    <h2>10. Out of Scope</h2>
+                    <div class="form-group">
+                        <label for="outOfScope">What's NOT included</label>
+                        <textarea id="outOfScope" rows="3" 
+                            placeholder="Clearly define what this project will NOT address"></textarea>
+                    </div>
+                </section>
+
+                <!-- Stakeholders Section -->
+                <section class="form-section">
+                    <h2>11. Stakeholders</h2>
+                    <div class="form-group">
+                        <label for="stakeholders">Key Stakeholders</label>
+                        <textarea id="stakeholders" rows="3" 
+                            placeholder="List stakeholders and their roles (Engineering, Design, Marketing, etc.)"></textarea>
+                    </div>
+                </section>
+
+                <!-- Action Buttons -->
+                <div class="button-group">
+                    <button type="button" id="previewBtn" class="btn btn-secondary">Preview PRD</button>
+                    <button type="button" id="exportBtn" class="btn btn-primary">Export as Markdown</button>
+                    <button type="button" id="clearBtn" class="btn btn-outline">Clear Form</button>
+                </div>
+            </form>
+
+            <!-- Preview Modal -->
+            <div id="previewModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>PRD Preview</h2>
+                        <button class="close-btn" id="closeModal">&times;</button>
+                    </div>
+                    <div class="modal-body" id="previewContent"></div>
+                    <div class="modal-footer">
+                        <button id="exportFromPreview" class="btn btn-primary">Export as Markdown</button>
+                        <button id="closePreview" class="btn btn-secondary">Close</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ for Product Managers | <a href="https://github.com/yourusername/prd-generator" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

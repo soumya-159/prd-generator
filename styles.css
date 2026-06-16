@@ -1,0 +1,419 @@
+/* IBM Carbon Design System Inspired Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Carbon Color Tokens */
+    --cds-background: #ffffff;
+    --cds-layer-01: #f4f4f4;
+    --cds-layer-02: #ffffff;
+    --cds-layer-03: #f4f4f4;
+    --cds-field-01: #f4f4f4;
+    --cds-field-02: #ffffff;
+    --cds-ui-background: #ffffff;
+    --cds-interactive: #0f62fe;
+    --cds-interactive-hover: #0353e9;
+    --cds-text-primary: #161616;
+    --cds-text-secondary: #525252;
+    --cds-text-placeholder: #a8a8a8;
+    --cds-text-on-color: #ffffff;
+    --cds-link-primary: #0f62fe;
+    --cds-link-primary-hover: #0043ce;
+    --cds-border-subtle: #e0e0e0;
+    --cds-border-strong: #8d8d8d;
+    --cds-focus: #0f62fe;
+    --cds-support-success: #24a148;
+    --cds-support-error: #da1e28;
+    --cds-support-warning: #f1c21b;
+    --cds-support-info: #0043ce;
+    
+    /* Spacing */
+    --cds-spacing-03: 0.5rem;
+    --cds-spacing-05: 1rem;
+    --cds-spacing-06: 1.5rem;
+    --cds-spacing-07: 2rem;
+    --cds-spacing-09: 3rem;
+}
+
+body {
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--cds-layer-01);
+    color: var(--cds-text-primary);
+    line-height: 1.5;
+    min-height: 100vh;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1056px;
+    margin: 0 auto;
+    padding: var(--cds-spacing-05);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--cds-interactive);
+    color: var(--cds-text-on-color);
+    padding: var(--cds-spacing-09) var(--cds-spacing-07);
+    margin-bottom: var(--cds-spacing-07);
+}
+
+header h1 {
+    font-size: 2.625rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: var(--cds-spacing-03);
+    letter-spacing: 0;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Form Sections */
+.form-section {
+    background-color: var(--cds-layer-02);
+    padding: var(--cds-spacing-07);
+    margin-bottom: var(--cds-spacing-05);
+    border-top: 1px solid var(--cds-border-subtle);
+}
+
+.form-section h2 {
+    color: var(--cds-text-primary);
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: var(--cds-spacing-06);
+    line-height: 1.29;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: var(--cds-spacing-06);
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: var(--cds-spacing-03);
+    color: var(--cds-text-secondary);
+    font-size: 0.75rem;
+    letter-spacing: 0.32px;
+    line-height: 1.34;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 0.6875rem 1rem;
+    border: none;
+    border-bottom: 1px solid var(--cds-border-strong);
+    font-size: 0.875rem;
+    font-family: 'IBM Plex Sans', inherit;
+    background-color: var(--cds-field-01);
+    color: var(--cds-text-primary);
+    outline: none;
+    transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9),
+                outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    outline: 2px solid var(--cds-focus);
+    outline-offset: -2px;
+}
+
+input[type="text"]:disabled,
+input[type="date"]:disabled,
+textarea:disabled {
+    border-bottom: 1px solid transparent;
+    background-color: var(--cds-field-01);
+    color: var(--cds-text-disabled);
+    cursor: not-allowed;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    padding-top: 0.6875rem;
+}
+
+small {
+    display: block;
+    margin-top: var(--cds-spacing-03);
+    color: var(--cds-text-secondary);
+    font-size: 0.75rem;
+    line-height: 1.34;
+    letter-spacing: 0.32px;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: var(--cds-spacing-05);
+    flex-wrap: wrap;
+    margin-top: var(--cds-spacing-07);
+    padding: var(--cds-spacing-07);
+    background-color: var(--cds-layer-02);
+    border-top: 1px solid var(--cds-border-subtle);
+}
+
+.btn {
+    padding: 0.875rem 3.9375rem 0.875rem 1rem;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: 0.16px;
+    cursor: pointer;
+    transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+    font-family: 'IBM Plex Sans', inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    position: relative;
+}
+
+.btn-primary {
+    background-color: var(--cds-interactive);
+    color: var(--cds-text-on-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--cds-interactive-hover);
+}
+
+.btn-primary:active {
+    background-color: #002d9c;
+}
+
+.btn-primary:focus {
+    outline: 2px solid var(--cds-focus);
+    outline-offset: -2px;
+}
+
+.btn-secondary {
+    background-color: var(--cds-text-secondary);
+    color: var(--cds-text-on-color);
+}
+
+.btn-secondary:hover {
+    background-color: #393939;
+}
+
+.btn-secondary:active {
+    background-color: #161616;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--cds-text-primary);
+    border: 1px solid var(--cds-interactive);
+    padding: calc(0.875rem - 1px) calc(3.9375rem - 1px) calc(0.875rem - 1px) calc(1rem - 1px);
+}
+
+.btn-outline:hover {
+    background-color: var(--cds-layer-01);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 22, 22, 0.5);
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--cds-layer-02);
+    margin: var(--cds-spacing-05);
+    padding: 0;
+    max-width: 768px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    padding: var(--cds-spacing-05);
+    border-bottom: 1px solid var(--cds-border-subtle);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--cds-text-primary);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--cds-text-primary);
+    line-height: 1;
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+.close-btn:hover {
+    background-color: var(--cds-layer-01);
+}
+
+.close-btn:focus {
+    outline: 2px solid var(--cds-focus);
+    outline-offset: -2px;
+}
+
+.modal-body {
+    padding: var(--cds-spacing-05);
+    overflow-y: auto;
+    flex: 1;
+}
+
+.modal-body h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: var(--cds-spacing-06);
+    margin-bottom: var(--cds-spacing-03);
+    color: var(--cds-text-primary);
+    line-height: 1.5;
+}
+
+.modal-body h3:first-child {
+    margin-top: 0;
+}
+
+.modal-body p {
+    margin-bottom: var(--cds-spacing-03);
+    white-space: pre-wrap;
+    line-height: 1.5;
+    color: var(--cds-text-primary);
+}
+
+.modal-body ul {
+    margin-left: var(--cds-spacing-05);
+    margin-bottom: var(--cds-spacing-03);
+}
+
+.modal-footer {
+    padding: var(--cds-spacing-05);
+    border-top: 1px solid var(--cds-border-subtle);
+    display: flex;
+    gap: var(--cds-spacing-05);
+    justify-content: flex-end;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: var(--cds-spacing-09) var(--cds-spacing-05);
+    color: var(--cds-text-secondary);
+    font-size: 0.875rem;
+}
+
+footer a {
+    color: var(--cds-link-primary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cds-link-primary-hover);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 0.875rem;
+    }
+
+    .form-section {
+        padding: var(--cds-spacing-05);
+    }
+
+    .button-group {
+        flex-direction: column;
+        padding: var(--cds-spacing-05);
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .modal-content {
+        margin: var(--cds-spacing-03);
+        max-height: 95vh;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+    }
+}
+
+/* Loading State */
+.btn.loading {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Success Message */
+.success-message {
+    background-color: var(--cds-support-success);
+    color: var(--cds-text-on-color);
+    padding: var(--cds-spacing-05);
+    margin-bottom: var(--cds-spacing-05);
+    display: none;
+    font-size: 0.875rem;
+    line-height: 1.29;
+}
+
+.success-message.show {
+    display: block;
+}
+
+/* IBM Plex Sans Font Import */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap');
+
+/* Made with Bob */
